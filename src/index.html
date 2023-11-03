@@ -1,11 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/main.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Send your parcel</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto flex flex-col items-center pt-12 pb-12 ">
+        <div class="bg-white w-full max-w-2xl p-3">
+
+            <h1 class="italic text-5xl font-bold mb-10">
+            <span class="text-blue">Send your parcel</span>
+            </h1>
+            <div class="md:p-6 p-5 mt-10 mb-10 flex flex-col" style="background-color: #fafbff; border-radius: 8px;">
+            <div class="flex flex-row justify-between flex-wrap">
+              <div class="flex">
+                <img alt="" class="h-7 pr-2" src="https://cdn.ship24.com/assets/images/shipfromchina/s-24-lock.svg">
+                <span class="pt-1">Supported payment methods</span>
+              </div>
+              <div class="pt-4 pl-9 md:pt-0 md:pl-9">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/stripe.svg">
+              </div>
+            </div>
+            <div class="flex flex-row justify-between flex-wrap px-8 pt-8">
+              <div class="pb-5">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/visa.svg">
+              </div>
+              <div class="pb-5">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/mastercard.svg">
+              </div>
+              <div class="pb-5">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/maestro.svg">
+              </div>
+              <div class="pb-5">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/american-express.svg">
+              </div>
+              <div class="pb-5">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/union-pay.svg">
+              </div>
+              <div class="flex flex-col">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/we-chat-pay.svg">
+              </div>
+              <div class="mr-auto md:mr-0 flex flex-col">
+                <img alt="" src="https://cdn.ship24.com/assets/images/payment/alipay.svg">
+              </div>
+            </div>
+            </div>
+            <form class="border-1 p-5 mt-6 mb-6 rounded-md">
+                <!-- Header -->
+                <div class="text-2xl font-bold flex flex-row cursor-pointer">
+                <span class="text-indigo-600">01.</span>
+                <span class="text-blue">&nbsp;Sender &amp; pickup</span>
+                </div> 
+                <!-- description -->
+                <div class="p-4 w-fit">
+                    <p class="mt-6 mb-6">
+                        Please complete the pickup address information. After placing your order, you will be called by our pickup partner ZTO/中通快递 to schedule a convenient pickup time for you.
+                    </p>
+                </div> 
+                <!-- Name Input -->
+                <div class="flex flex-wrap">
+                    <app-form-input-text class="w-full md:w-2/2 mb-3 px-0">
+                      <label class="block tracking-wide text-gray-700 text-xs font-medium mb-1 h-5">Name</label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input class="appearance-none block w-full text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white border-red-500 bg-red-100 focus:ring-red" type="text" value="" required="true" style="padding-left: 16px;">
+                      </div>
+                      <p class="text-red-500 text-xs items-center"><i class="s24-alert-circle-solid"></i> Please enter a full name, up to 35 characters. </p>
+                    </app-form-input-text>
+                </div>
+                <!-- Email Input -->
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-2/2 mb-3 px-0">
+                      <label class="block tracking-wide text-gray-700 text-xs font-pro-text font-medium mb-1" style="height: 20px;">
+                        Email
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input class="appearance-none block w-full text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white border-red-500 bg-red-100 focus:ring-red" type="email" value="" required="true" style="padding-left: 16px;">
+                      </div>
+                      <p class="text-red-500 text-xs items-center">
+                        <i class="s24-alert-circle-solid"></i> Please enter a valid email.
+                      </p>
+                    </div>
+                </div> 
+                <!-- Phone Number Input -->
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-3/6 md:pr-2 mb-3">
+                      <label class="block tracking-wide text-gray-700 text-xs font-pro-text font-medium mb-1" style="height: 20px;">
+                        Chinese mobile number
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <div class="absolute inset-y-0 left-0 pl-2 flex items-center pointer-events-none rounded-l bg-gray-100 border-gray-200 border-r" style="width: 105px; left: 1px; right: 1px; top: 1px; bottom: 1px;">
+                          <span class="text-gray-600 text-base sm:leading-5 text-center" style="margin-left: 53px; width: 42px;">+86</span>
+                        </div>
+                        <input type="number" class="appearance-none block w-full text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:ring" style="padding-left: 110px;" required="true">
+                        <div class="absolute" style="width: 55px; left: 3px; top: 7px;">
+                          <div class="px-2 flex items-center" style="height: 24px;">
+                            <img alt="Flag" src="https://cdn.ship24.com/assets/images/flags/CN.png" class="ng-star-inserted">
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center p;-2 text-gray-700">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current h-4 w-4">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="text-red-500 text-xs items-center" hidden="">
+                        <i class="s24-alert-circle-solid"></i> Please enter a valid phone number for the selected country prefix.
+                      </p>
+                    </div>
+                    <div class="w-full md:w-3/6 md:pl-2 mb-3">
+                      <label class="block tracking-wide text-gray-700 text-xs font-pro-text font-medium mb-1" style="height: 20px;">
+                        Chinese ID Card or passport number
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input class="appearance-none block w-full text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:ring" type="text" value="" required="true" placeholder="" style="padding-left: 16px;">
+                      </div>
+                      <p class="text-red-500 text-xs items-center" hidden="">
+                        <i class="s24-alert-circle-solid"></i> Please enter a valid ID card number (18 digits) or a valid passport number.
+                      </p>
+                    </div>
+                </div>    
+                <!-- Address -->
+                <div _ngcontent-ship24-c1453519576="" class="flex flex-wrap mb-3 ng-tns-c1453519576-0">
+                    <app-form-input-text _ngcontent-ship24-c1453519576="" formcontrolname="detailedAddress" class="w-full md:w-2/2 md:mb-0 ng-tns-c1453519576-0 ng-untouched ng-pristine ng-invalid">
+                        <label class="block tracking-wide text-gray-700 text-xs font-pro-text font-medium mb-1" style="height: 20px;"> Address (in Chinese)
+                        </label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input ngdefaultcontrol="" class="appearance-none block w-full text-gray-700 border rounded py-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:ring" type="text" value="" required="false" style="padding-left: 16px;">
+                    </div>
+                    <p class="text-red-500 text-xs items-center ng-star-inserted" hidden="">
+                        <i class="s24-alert-circle-solid">
+                        </i> Please enter an address in Chinese, up to 80 characters. </p>
+                    </app-form-input-text>
+                </div>
+                <!-- Next button -->
+                <div class="flex justify-end">
+                    <div class="flex-grow"></div>
+                    <button class="transition focus:outline-none text-sm leading-none rounded-full font-medium italic border-1 border-blue-800 hover:border-indigo-500 active:border-indigo-600 focus:border-indigo-500 bg-blue-800 hover:bg-indigo-500 active:bg-indigo-600 focus:bg-indigo-500 text-white px-5 py-3">
+                      <span>Next</span>
+                    </button>
+                  </div>
+            </form>
+            <form novalidate class="border-1 p-5 mb-10" style="border-radius: 5px;">
+                <div class="text-2xl font-bold flex flex-row" style="cursor: pointer;">
+                  <span class="text-indigo-600">02.</span>
+                  <span class="text-blue">Recipient & delivery</span>
+                </div>
+            </form>
+            <form novalidate class="border-1 p-5 mb-10" style="border-radius: 5px;">
+                <div class="text-2xl font-bold flex flex-row" style="cursor: pointer;">
+                  <span class="text-indigo-600">03.</span>
+                  <span class="text-blue"> Parcel & payment</span>
+                </div>
+            </form>
+        </div>
+    </div>
   </body>
+</body>
 </html>
